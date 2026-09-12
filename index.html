@@ -865,5 +865,21 @@
   <div class="wrap">Alberto Seminerio — Agrigento, Sicilia</div>
 </footer>
 
+
+<script>
+  window.addEventListener('load', function () {
+    var nav = document.querySelector('nav.links');
+    if (!nav) return;
+    var maxScroll = nav.scrollWidth - nav.clientWidth;
+    if (maxScroll > 10) {
+      setTimeout(function () {
+        nav.scrollTo({ left: maxScroll, behavior: 'smooth' });
+        setTimeout(function () {
+          nav.scrollTo({ left: 0, behavior: 'smooth' });
+        }, 900);
+      }, 500);
+    }
+  });
+</script>
 </body>
 </html>
